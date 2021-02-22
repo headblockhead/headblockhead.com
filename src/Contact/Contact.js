@@ -18,21 +18,28 @@ class Contact extends Component {
                     <a> SB3 file: </a><a href="files/" download="catcalc.sb3">catcalc.sb3</a>
                     <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                     <h2>Ball Bounce</h2>
-                    <p>Despite the name, this game is about catching balls, not bouncing them. The objective of the game is to catch the rainbow balls whilst avoiding the red flashing ones. Move with the arrow keys. This one did not get a video made about it, but was quite fun to make.</p>
+                    <p>Despite the name, this game is about catching balls, not bouncing them. The objective of the game is to catch the rainbow balls whilst avoiding the red flashing ones. Move your charcter with the arrow keys. This one did not get a video made about it, but was quite fun to make.</p>
                     <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                     <h2>Balloon Pop</h2>
+                    <p>Pop balloons by clicking on them before the time at the top runs out. Don't pop the purple balloons however as they will take away from your score!</p>
                     <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                     <h2>Crossy Road</h2>
+                    <p>Click infront of the chicken to move them forward but don't let the cars touch you, they will kill you instanly!</p>
                     <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                     <h2>Question cat</h2>
+                    <p>The all knowing cat will ask you three maths questions to check if you are worthy of existance. What about 4 questions? 5? 6? No, ∞ questions! Try this, human!</p>
                     <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                     <h2>Bubble Pop</h2>
+                    <p>This game is not finished (yet) but it already has most of the gameplay. The idea was that you would move the red ball in the center and get pooints for popping the bubbles by having them bump into you.</p>
                     <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                     <h2>Scratch Iphone 1.0</h2>
+                    <p>The original scratch Iphone, shown in a now lost video. Unlock with the code 0000 and have fun!</p>
                     <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                     <h2>Scratch Iphone 2.0</h2>
+                    <p>The second scratch Iphone, never shown in video. Unlock with the code 0000 and have fun! This is almost identical to the 3rd scratch iphone, the only difference being that it still has the leftovers from a snake game I was trying to make, before i decided to go with flappy bird, in the code.</p>
                     <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                     <h2>Scratch Iphone 3.0</h2>
+                    <p>The third scratch Iphone, never shown in video. Unlock with the code 0000 and have fun! This is almost identical to the 2nd scratch iphone, differences between the two listed above.</p>
                 </div>
                 <div>
                     <br></br>
@@ -60,13 +67,13 @@ class Contact extends Component {
                     <iframe title="bubblepop" src="https://scratch.mit.edu/projects/129351718/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
                     <br></br>
                     <br></br>
-                    <iframe src="https://scratch.mit.edu/projects/129299025/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                    <iframe title="iphone1" src="https://scratch.mit.edu/projects/129299025/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
                     <br></br>
                     <br></br>
-                    <iframe src="https://scratch.mit.edu/projects/253165316/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                    <iframe title="iphone2" src="https://scratch.mit.edu/projects/253165316/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
                     <br></br>
                     <br></br>
-                    <iframe src="https://scratch.mit.edu/projects/269089599/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                    <iframe title="iphone3" src="https://scratch.mit.edu/projects/269089599/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
                     <br></br>
                     <br></br>
                 </div>

@@ -3,7 +3,7 @@ import './Navbar.css';
 import { Navbar, Nav, Form, Button } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 
-const Navigation = (props) => {
+const Navigation = (props, onToggleDark) => {
     console.log(props);
     return (
         <Navbar bg="primary" variant="dark">

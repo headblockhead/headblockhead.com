@@ -4,11 +4,14 @@ import Navigation from './components/Navbar';
 import Routes from './Routes';
 
 function App() {
+ 
   return (
+    
     <div className="App">
-      <Navigation />
-      <Routes />
+      <Navigation/>
+      <Routes/>
     </div>
+
   );
 }
 

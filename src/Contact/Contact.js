@@ -10,11 +10,13 @@ class Contact extends Component {
                     <h5>This is a collection of every game I ever made, starting with scratch projects made when I was just 6 years old and ending with advanced unity projects. Be warned, not all of the games shown here will work fully!</h5>
                     <br></br>
                     <br></br>
+                    <br></br>
                     <h2>Scratch Cat Calculator</h2>
                     <p>This is the first game I ever made. In this "game" you type in a number and then another number, select a symbol and wait for 10 seconds whilst the cat "thinks". They will then tell you the answer. I was very proud of this creation and even made a youtube video on it, but that was sadly lost due to a careless reformat of my old laptop's hard drive.</p>
-                    <br></br><p> Scratch link: </p><a href="https://scratch.mit.edu/projects/129350991">https://scratch.mit.edu/projects/129350991</a>
-                    <p> SB3 file: </p>
-                    <br></br><a href="./files/catcalculator.sb3" download="catcalculator.sb3">Download</a>
+                    <a> Scratch link: </a><a href="https://scratch.mit.edu/projects/129350991">https://scratch.mit.edu/projects/129350991</a>
+                    <br></br>
+                    <br></br>
+                    <a> SB3 file: </a><a href="files/" download="catcalc.sb3">catcalc.sb3</a>
                     <br></br>
                     <br></br>
                     <br></br>
@@ -27,20 +29,12 @@ class Contact extends Component {
                     <br></br>
                     <h2>Ball Bounce</h2>
                     <p>Despite the name, this game is about catching balls, not bouncing them. The objective of the game is to catch the rainbow balls whilst avoiding the red flashing ones. Move with the arrow keys. This one did not get a video made about it, but was quite fun to make.</p>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
+                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                     <h2>Balloon Pop</h2>
-                    <p></p>
+                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                    <h2>Crossy Road</h2>
+                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                    <h2>Question cat</h2>
                 </div>
                 <div>
                     <br></br>
@@ -59,6 +53,13 @@ class Contact extends Component {
                     <iframe src="https://scratch.mit.edu/projects/129351373/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowFullScreen></iframe>
                     <br></br>
                     <br></br>
+                    <iframe src="https://scratch.mit.edu/projects/129351921/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowFullScreen></iframe>
+                    <br></br>
+                    <br></br>
+                    <iframe src="https://scratch.mit.edu/projects/137951368/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowFullScreen></iframe>
+                    <br></br>
+                    <br></br>
+                    <iframe src="https://scratch.mit.edu/projects/129351718/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
                 </div>
             </div>
         );

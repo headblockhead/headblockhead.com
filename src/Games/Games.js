@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core';
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 
-class Contact extends Component {
+class Games extends Component {
     render() {
         return (
             <div style={{ display: 'flex', justifyContent: 'center', padding: 30 }}>
@@ -93,4 +93,4 @@ class Contact extends Component {
     }
 }
 
-export default Contact;
+export default Games;

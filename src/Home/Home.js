@@ -12,10 +12,10 @@ export default class Home extends Component {
           <h5>Welcome to my Website :)</h5>
           <br></br>
           <form>
-            <Button variant="contained" color="secondary" onClick={() => history.push('/About')}>Visit my minecraft server</Button>
+            <Button variant="contained" color="secondary" onClick={() => history.push('/Mc')}>Visit my minecraft server</Button>
             <br></br>
             <br></br>
-            <Button variant="contained" color="primary" onClick={() => history.push('/Contact')}>Browse my games</Button>
+            <Button variant="contained" color="primary" onClick={() => history.push('/Games')}>Browse my games</Button>
           </form>
         </div>
       </div>

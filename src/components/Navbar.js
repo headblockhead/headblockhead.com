@@ -12,8 +12,8 @@ const Navigation = (props, onToggleDark) => {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/About">My Minecraft server</Nav.Link>
-                    <Nav.Link href="/Contact">My Games</Nav.Link>
+                    <Nav.Link href="/Mc">My Minecraft server</Nav.Link>
+                    <Nav.Link href="/Games">My Games</Nav.Link>
                     <Nav.Link href="/Products">My Products</Nav.Link>
                 </Nav>
             </Navbar.Collapse>

@@ -1,20 +1,11 @@
-.navbar {
-  border-bottom: solid 1px #EBEBEB;
+.App {
+  margin-top: 0px;
 }
 
-.bottom-tab-nav {
-  border-top: solid 1px #EBEBEB;
+.App .navbar-brand {
+  font-weight: bold;
 }
 
-.nav-link,
-.bottom-nav-link {
-  color: #55575b;
-}
-
-.bottom-nav-link.active {
-  color: #922c88;
-}
-
-.bottom-tab-label {
-  font-size: 12px;
+.App .container{
+  align-content: center
 }

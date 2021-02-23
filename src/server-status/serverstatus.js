@@ -64,7 +64,7 @@ export class Serverstatus extends Component {
                                 <Button variant="outlined" color="primary" onClick={() => { navigator.clipboard.writeText(url); BUTTONTEXT = "COPIED!"; this.forceUpdate(); setTimeout(() => { BUTTONTEXT = "COPY"; this.forceUpdate(); }, 2000); }}>{BUTTONTEXT}</Button>
                             </div>
                             <div id="c6">
-                                <Button size='small' variant="outlined" color="secondary" onClick={() => { window.open("https://github.com/headblockhead/minecraft-server-status-react") }}>Like this?</Button>
+                                <Button size='small' variant="outlined" color="secondary" onClick={() => { window.open("https://github.com/headblockhead/react-minecraft-server-display") }}>Like this?</Button>
                             </div>
                         </div>
 
@@ -114,7 +114,7 @@ export class Serverstatus extends Component {
                             <div id="c5mobile">
                                 <p>{url}</p>
                             </div>
-                            <Button size='small' variant="outlined" color="secondary" onClick={() => { window.open("https://github.com/headblockhead/minecraft-server-status-react") }}>Like this?</Button>
+                            <Button size='small' variant="outlined" color="secondary" onClick={() => { window.open("https://github.com/headblockhead/react-minecraft-server-display") }}>Like this?</Button>
                         </div>
 
 

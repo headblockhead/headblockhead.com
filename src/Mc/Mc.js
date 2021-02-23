@@ -6,7 +6,6 @@ import status from 'minecraft-server-status';
 import "./Mc.css";
 
 const GeticonFromBase64 = ({ data }) => <img alt="The server Icon" src={`data:image/jpeg;base64,${data}`} />
-const Displaytext = ({ text, text2 }) => <p>{text2}{text}</p>
 var maxplayers = "???"
 var playerson = "???"
 var url = 'mc.hypixel.net'
@@ -59,18 +58,23 @@ class Mc extends Component {
 
                                 </div>
                                 <div id="c2">
-                                    <Displaytext text2="Currents players online: " text={playerson}></Displaytext>
-                                    <Displaytext text2="Max players online: " text={maxplayers}></Displaytext>
+                                    <p>Currents players online: {playerson}</p>
+                                    <p>Max players online: {maxplayers}</p>
 
                                 </div>
                                 <div id="c3">
                                     <hr></hr>
                                     <div id="c5">
-                                        <Displaytext text2="" text={url}></Displaytext>
+                                        <p>{url}</p>
+
                                     </div>
                                     <div id="c4">
                                         <Button variant="outlined" color="secondary" onClick={() => { navigator.clipboard.writeText(url); BUTTONTEXT = "COPIED!"; this.forceUpdate(); setTimeout(() => { BUTTONTEXT = "COPY"; this.forceUpdate(); }, 2000); }}>{BUTTONTEXT}</Button>
                                     </div>
+                                    <div id="c6">
+                                        <p style={{ fontSize: 17, textAlign: "center" }}>Powered by headblockhead.com</p>
+                                    </div>
+                                    
 
                                 </div>
 
@@ -120,19 +124,18 @@ class Mc extends Component {
 
                                 </div>
                                 <div id="c2mobile">
-                                    <Displaytext text2="Currents players online: " text={playerson}></Displaytext>
-                                    <Displaytext text2="Max players online: " text={maxplayers}></Displaytext>
+                                    <p>Currents players online: {playerson}</p>
+                                    <p>Max players online: {maxplayers}</p>
 
                                 </div>
                                 <div id="c3mobile">
                                     <hr></hr>
                                     <div id="c5mobile">
-                                        <Displaytext text2="" text={url}></Displaytext>
+                                        <p>{url}</p>
                                     </div>
-                                    <div id="c4mobile">
-                                        <Button variant="outlined" color="secondary" onClick={() => { navigator.clipboard.writeText(url); BUTTONTEXT = "COPIED!"; this.forceUpdate(); setTimeout(() => { BUTTONTEXT = "COPY"; this.forceUpdate(); }, 2000); }}>{BUTTONTEXT}</Button>
+                                    <div id="c6mobile">
+                                        <p style={{ fontSize: 10}}>Powered by<br /> headblockhead.com</p>
                                     </div>
-
                                 </div>
 
 

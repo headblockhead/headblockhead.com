@@ -1,45 +1,146 @@
-import React, { Component } from 'react';
+import React, { Component, useRef, useState } from 'react';
+import { BrowserView, MobileView } from 'react-device-detect';
 import Button from '@material-ui/core/Button'
 import { Paper } from '@material-ui/core';
 import status from 'minecraft-server-status';
+import "./Mc.css";
 
 const GeticonFromBase64 = ({ data }) => <img src={`data:image/jpeg;base64,${data}`} />
-const Displaytext = ({text}) => <p>{text}</p>
-var data = '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'
-var maxplayers = 0;
-var playerson = 0;
+const Displaytext = ({ text, text2 }) => <p>{text2}{text}</p>
+var maxplayers = "???"
+var playerson = "???"
+var url = 'mc.hypixel.net'
+var BUTTONTEXT = 'copy'
+var pic = 'iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiAhwGFjopTru5AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAyLTI4VDA2OjIyOjU4KzAwOjAwl9KGlAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMi0yOFQwNjoyMjo1OCswMDowMOaPPigAAAe4SURBVHhe7ZtZaBU9FIBz60a17uJW1yquWJUqLlVcqPuC64MWqVbBXUFFfNCiVcQX1wffRH1REXyogqggxRVXXHGHqrR1aRVqq7jPn3M4SefOzL2Tmcnc/vz9Pwg592SSSc4kM0lObsTgsFpMEsW1lv8NQHGtpcbeAb9+/WJfv35lkUiEpaSksDp16lBKYklIDzh+/DjLyclh3bt3xwZDqF+/PmvevDlr1qwZq1u3rtT37duXLV26lBUUFFDukIEeEAZ79+41UlNToXcFCr179zYOHz5MpepH6xCAorKzs/GJOzFixAg2aNAg1qNHD9auXTvWqFEj1H/58oWVlpayZ8+esdu3b2NwYs2aNWz//v30SxNgAB0sW7bM9vTat29v7Nmzx/j8+TNdpc7bt2+Nbdu2GdxItnLz8/PpquAENsCtW7dsFZw5c6bx4cMHuiI4T58+NXjvibpHUlKSUVJSQlf4J5ABli9fHlWpzMxMg7/dKVU/YNS0tLSoe0IPC4JvA/Tq1SuqIlevXqWU8Dl27FjUvSdPnkwp3vFlgKZNm8qbd+vWjbSJJzk5WdajX79+pPWG568AfLcrKipQnjVrFjt16hTKXuAvOHbnzh32/v17nAB16NCBDR8+HOcFXunfvz97+PAhygMGDGD37t1DWRk0gyJ9+vSRFl+8eDFp1aiqqjIWLFgg88cKK1asMH7//k251IB3j8g/e/Zs0qqhbIDVq1fLm8yYMYO0aoCxRF7VsGTJEsqtBkyYRN5Dhw6R1h0lA/BuJQvv0qULadUwj1MIYLzz588b379/pysMo7y83OCTJ9unDsKfP3/oKnfg0yjyVVZWkjY+SgYwV8gL5nxDhgwhbXx+/vxpZGRkROX9+/cvpcaHL65knhYtWpA2Pq4t4tNPWWhhYSFp3TF3yc2bN5NWnX379sn88GRVMedTGQquBhCFDR48mDTu8C+DzJebm0ta7/B5vyxn06ZNpHWncePGMp8bca9YtGiRLOjbt2+kdUeMRf6JI41/0tPTlRsjuHv3rszjNlOMW6ooZMqUKaRxh3+TZb6TJ0+S1j8vXryQ5RUUFJDWnU6dOsl88YiZevDgQVkArMxUga6qcmMviPJWrVpFGnfOnj0r812+fJm0dmLWsmvXrpi5ZcuWpFFjzJgxmA/y6wKW1VAmrDK9IAwwbdo00tiJuSVWVFSE8YYNGzBW5c2bNxjDhocuysrKMOYvN4xV4TNPjM+cOYOxE44GMM/v+YuQJDXGjx+P8fTp0zHWAWygAgMHDsRYFdiHFMBukyPUE6KAaSgkxUhOKOfOnZN1efXqFWnVEXl3795NmmgcW9izZ0/MpDp7C5NRo0bJRvghJSUF88Z6fzgOgefPn2PMJz8Y1xTv3r1jly5dQjk/Px9jr/CHiPH9+/cxthLXL8B7Akk1A3/7k8TYli1bSPIG7EAD4qVuxWYAvhYnKboCiaSkpASdJIJYT0+F1NRUkpyxGQDcVQKvnx0dLFy4EHeIBHw2ibs+fnFrg80A/L1AEot6CmFz8eJFvN/Ro0dJw3DbbO7cufQrHGwGEN4aoLKykqRwWblyJcvKyqJfjI0ePRofREZGBmn8U1VVRZIzNgPUq1ePJIablmGTl5fH+LqDfjF0ixUWFtKv4Li1wWYAMy9fviQpHD59+sS2b9+OMrjI4amD71AnfDWJcceOHTG24miAtLQ0jGEMhklubi5J4Q030Yb09HSMrTgaIDMzE+MrV65gHBanT5/GWCxawgB6GSDaZMXRAGJBA4DrOgzKy8tJYmz+/Pkk6eX69eskMTZx4kSSLMB82ApsRUMShAMHDpBWL+BLFPcoLi4mrV7MLvtYxExp3bo1ZtS5sWHGvGMD29lhIMofO3YsaezE/AqsX78eY5hDhzEMkpKqb/3jxw+S9HHt2jWSqtviCBnCEUiGkJ2dTRp9mL1NpaWlpNUHnz7L8uMRNxXcWCqF+GXjxo3Gjh076Jc+Xr9+LevNV5GkdSZuy8AXIAoKcggh0ahuiQOuV8ybN08W9uTJE9LqoaKiAn2BOjlx4oSs765du0gbG6W+LQqEoAuzJziI+8yKKFPVn6jUIvMna+jQoaT1D1/yyvJEAHdWUFq1aiXLg/eACjE/g2YmTZrE+AsR5Rs3brB169ah7JdHjx6RVM2DBw9I8se4cePk7HLr1q2sc+fOKLtChlACvESQBYLK+IoFX6LKckQIAp9Ky3K87mR7vrO50vAZ88vjx4+NYcOGoSutrKyMtN4Bt5eoT5s2bUirji/Tm40ADagpzIcmYfz7wXffa9Kkibx5JBLRcmxVFevxXDi95pdAgy8rKyuqIjk5OZQSHtZ7wnHdIAR7+3DgdJe5QhD44oNS9QAnysC41vvw9T5d4Z/ABhBYnwyEkSNH4nkhvxw5cgSPwFrL1dnTtP5hori4mM2ZM4fdvHmTNNW0bdsWt75hq1v8YUJshMJ+IHiDwCcJu8IXLlyQx3HNTJ06FR0lycnJpNEAGEA3sMGxdu1a25PzExo0aGDk5eVRyfoJxQBmioqKjJ07d6KbG06NOTXSHOBk6YQJE/C8X5D5gSpah4AqsMP08eNH9NqAOwz8dzBEGjZsSFckjhoxwL8JpcXQf5n/DUBxLYWxfwCnV7DfYJXByQAAAABJRU5ErkJggg=='
+
+
 class Mc extends Component {
     render() {
         return (
-            <div style={{ display: 'flex', justifyContent: 'center', padding: 30 }}>
-                <div ><h2>My Minecraft Server!</h2><hr></hr><h3>Find it at barkup.headblockhead.com!</h3>
-                    <br></br>
-                    <Button style={{
-                        position: 'absolute', left: '50%', top: '30%',
-                        transform: 'translate(-50%, -50%)'
-                    }} variant="contained" color="primary" onClick={() => {
-                        
+            <>
+                <BrowserView>
+                    <div style={{ display: 'flex', justifyContent: 'center', padding: 30, textalign: 'center' }}>
+                        <div ><h2 style={{ display: 'flex', justifyContent: 'center', padding: 5, textalign: 'center', }}>My Minecraft Server!</h2><hr></hr>
+                            <br></br>
+                            <div style={{ display: 'flex', justifyContent: 'center', textalign: 'center', }}>
+                                <Button variant="contained" color="primary" onClick={() => {
+                                    status(url, 25565, response => {
+                                        console.log(response);
+                                        if (response.status != "error") {
+                                            var str = response.favicon;
 
-                        status('2b2t.org', 25565, response => {
-                            console.log(response);
-                            var str = response.favicon;
-                            data = str.split(",").pop();
-                            var maxplayers = response.players.max;
-                            console.log(maxplayers);
-                            var playerson = response.players.now;
-                            this.forceUpdate();
-                        })
-                    }}>Get status</Button>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <Paper color="secondary">
-                    <GeticonFromBase64 data={data} ></GeticonFromBase64>
-                    <Displaytext text={maxplayers}></Displaytext>
-                    </Paper>
-                </div>
-            </div >
+                                            pic = str.split(",").pop();
+
+                                            maxplayers = response.players.max;
+                                            playerson = response.players.now;
+                                            this.forceUpdate();
+                                        } else {
+                                            var url2 = url
+                                            url = "Cannot connect to server."
+                                            maxplayers = "???"
+                                            playerson = "???"
+                                            this.forceUpdate();
+                                            setTimeout(() => { url = url2; this.forceUpdate(); }, 2000);
+                                        }
+                                    })
+                                }}>Get Server Info</Button>
+                            </div>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            {/* Server detailes */}
+                            <Paper color="secondary" id="wrapper" elevation={3}>
+
+                                <div id="c1">
+                                    <Paper elevation={2}>
+                                        <GeticonFromBase64 data={pic}></GeticonFromBase64>
+                                    </Paper>
+
+                                </div>
+                                <div id="c2">
+                                    <Displaytext text2="Currents players online: " text={playerson}></Displaytext>
+                                    <Displaytext text2="Max players online: " text={maxplayers}></Displaytext>
+
+                                </div>
+                                <div id="c3">
+                                    <hr></hr>
+                                    <div id="c5">
+                                        <Displaytext text2="" text={url}></Displaytext>
+                                    </div>
+                                    <div id="c4">
+                                        <Button variant="outlined" color="secondary" onClick={() => { navigator.clipboard.writeText(url); BUTTONTEXT = "COPIED!"; this.forceUpdate(); setTimeout(() => { BUTTONTEXT = "COPY"; this.forceUpdate(); }, 2000); }}>{BUTTONTEXT}</Button>
+                                    </div>
+
+                                </div>
+
+
+                            </Paper>
+                        </div>
+                    </div >
+                </BrowserView>
+                <MobileView>
+                <div style={{ display: 'flex', justifyContent: 'center', padding: 30, textalign: 'center' }}>
+                        <div ><h2 style={{ display: 'flex', justifyContent: 'center', padding: 5, textalign: 'center', fontSize:27}}>My Minecraft Server!</h2><hr></hr>
+                            <br></br>
+                            <div style={{ display: 'flex', justifyContent: 'center', textalign: 'center', }}>
+                                <Button variant="contained" color="primary" onClick={() => {
+                                    status(url, 25565, response => {
+                                        console.log(response);
+                                        if (response.status != "error") {
+                                            var str = response.favicon;
+
+                                            pic = str.split(",").pop();
+
+                                            maxplayers = response.players.max;
+                                            playerson = response.players.now;
+                                            this.forceUpdate();
+                                        } else {
+                                            var url2 = url
+                                            url = "Cannot connect to server."
+                                            maxplayers = "???"
+                                            playerson = "???"
+                                            this.forceUpdate();
+                                            setTimeout(() => { url = url2; this.forceUpdate(); }, 2000);
+                                        }
+                                    })
+                                }}>Get Server Info</Button>
+                            </div>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            {/* Server detailes */}
+                            <Paper color="secondary" id="wrappermobile" elevation={3}>
+
+                                <div id="c1mobile">
+                                    <Paper elevation={2}>
+                                        <GeticonFromBase64 data={pic}></GeticonFromBase64>
+                                    </Paper>
+
+                                </div>
+                                <div id="c2mobile">
+                                    <Displaytext text2="Currents players online: " text={playerson}></Displaytext>
+                                    <Displaytext text2="Max players online: " text={maxplayers}></Displaytext>
+
+                                </div>
+                                <div id="c3mobile">
+                                    <hr></hr>
+                                    <div id="c5mobile">
+                                        <Displaytext text2="" text={url}></Displaytext>
+                                    </div>
+                                    <div id="c4mobile">
+                                        <Button variant="outlined" color="secondary" onClick={() => { navigator.clipboard.writeText(url); BUTTONTEXT = "COPIED!"; this.forceUpdate(); setTimeout(() => { BUTTONTEXT = "COPY"; this.forceUpdate(); }, 2000); }}>{BUTTONTEXT}</Button>
+                                    </div>
+
+                                </div>
+
+
+                            </Paper>
+                        </div>
+                    </div >
+                </MobileView>
+            </>
         );
     }
 }

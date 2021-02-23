@@ -8,14 +8,14 @@ export default class Home extends Component {
     return (
       <div className="Home">
         <div className="lander">
-          <h1>Headblockhead.com</h1>
-          <h5>Welcome to my Website :)</h5>
+          <h1>Headblockhead</h1>
+          <h5>A collection of all things to do with me.</h5>
           <br></br>
           <form>
-            <Button variant="contained" color="secondary" onClick={() => history.push('/Mc')}>Visit my minecraft server</Button>
+            <Button variant="contained" color="secondary" onClick={() => history.push('/Mc')}>My minecraft server</Button>
             <br></br>
-            <br></br>
-            <Button variant="contained" color="primary" onClick={() => history.push('/Games')}>Browse my games</Button>
+            <hr></hr>
+            <Button variant="contained" color="primary" onClick={() => history.push('/Games')}>My games</Button>
           </form>
         </div>
       </div>

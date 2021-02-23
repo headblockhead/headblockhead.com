@@ -1,11 +1,11 @@
-import React, { Component, useRef, useState } from 'react';
+import React, { Component } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 import Button from '@material-ui/core/Button'
 import { Paper } from '@material-ui/core';
 import status from 'minecraft-server-status';
 import "./Mc.css";
 
-const GeticonFromBase64 = ({ data }) => <img src={`data:image/jpeg;base64,${data}`} />
+const GeticonFromBase64 = ({ data }) => <img alt="The server Icon"src={`data:image/jpeg;base64,${data}`} />
 const Displaytext = ({ text, text2 }) => <p>{text2}{text}</p>
 var maxplayers = "???"
 var playerson = "???"
@@ -26,7 +26,7 @@ class Mc extends Component {
                                 <Button variant="contained" color="primary" onClick={() => {
                                     status(url, 25565, response => {
                                         console.log(response);
-                                        if (response.status != "error") {
+                                        if (response.status !== "error") {
                                             var str = response.favicon;
 
                                             pic = str.split(",").pop();
@@ -87,7 +87,7 @@ class Mc extends Component {
                                 <Button variant="contained" color="primary" onClick={() => {
                                     status(url, 25565, response => {
                                         console.log(response);
-                                        if (response.status != "error") {
+                                        if (response.status !== "error") {
                                             var str = response.favicon;
 
                                             pic = str.split(",").pop();

@@ -1,4 +1,4 @@
-import React, { Component, Button } from "react";
+import React, { Component } from "react";
 import { Router, Switch, Route } from "react-router-dom";
 
 import Mc from "./Mc/Mc";

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { BrowserView, MobileView } from 'react-device-detect';
 import { Serverstatus } from '../server-status/serverstatus';
 import "./Mc.css";
 

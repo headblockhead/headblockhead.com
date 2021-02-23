@@ -1,0 +1,90 @@
+#wrapper{
+    overflow:auto;
+}
+
+#c1{
+   float:left;
+   padding:3%;
+   padding-top:5.7%;
+   padding-left:5%;
+   text-align: left;
+}
+#c3{
+    font-size: larger;
+    padding: 3%;
+    padding-top: 30%;
+    text-align: center;
+}
+#c2{
+    float:right;
+    font-size: small;
+    padding: 3%;
+    padding-top: 6.5%;
+    text-align: right;
+}
+#c4{
+    float:right;
+    font-size: small;
+    padding: 3%;
+    text-align: right;
+}
+#c5{
+    float:left;
+   padding:3%;
+   padding-left:5%;
+   text-align: left;
+}
+#c6{
+    text-align: left;
+    justify-content: center;
+padding-left: 35%;
+    padding-top: 20.82%;
+}
+#c7{
+    text-align: center;
+    justify-content: center;
+padding-left: 0%;
+    padding-top: 20.82%;
+}
+#wrappermobile{
+    overflow:auto;
+}
+
+#c1mobile{
+   float:left;
+   padding:3%;
+   padding-top:5.7%;
+   padding-left:5%;
+   text-align: left;
+}
+#c3mobile{
+    font-size: larger;
+    padding: 3%;
+    padding-top: 30%;
+    text-align: center;
+}
+#c2mobile{
+    float:right;
+    font-size: x-small;
+    padding: 3%;
+    padding-top: 6.5%;
+    text-align: right;
+}
+#c4mobile{
+    float:right;
+    font-size: small;
+    padding: 3%;
+    text-align: right;
+}
+#c5mobile{
+    float:center;
+   padding:3%;
+   padding-left:5%;
+   text-align: center;
+}
+#c6mobile{
+    float:right;
+    font-size: xx-small;
+    text-align: right;
+    padding-top: 3.5%;
+}

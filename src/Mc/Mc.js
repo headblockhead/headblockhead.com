@@ -5,7 +5,7 @@ import { Paper } from '@material-ui/core';
 import status from 'minecraft-server-status';
 import "./Mc.css";
 
-const GeticonFromBase64 = ({ data }) => <img alt="The server Icon"src={`data:image/jpeg;base64,${data}`} />
+const GeticonFromBase64 = ({ data }) => <img alt="The server Icon" src={`data:image/jpeg;base64,${data}`} />
 const Displaytext = ({ text, text2 }) => <p>{text2}{text}</p>
 var maxplayers = "???"
 var playerson = "???"
@@ -80,8 +80,8 @@ class Mc extends Component {
                     </div >
                 </BrowserView>
                 <MobileView>
-                <div style={{ display: 'flex', justifyContent: 'center', padding: 30, textalign: 'center' }}>
-                        <div ><h2 style={{ display: 'flex', justifyContent: 'center', padding: 5, textalign: 'center', fontSize:27}}>My Minecraft Server!</h2><hr></hr>
+                    <div style={{ display: 'flex', justifyContent: 'center', padding: 30, textalign: 'center' }}>
+                        <div ><h2 style={{ display: 'flex', justifyContent: 'center', padding: 5, textalign: 'center', fontSize: 27 }}>My Minecraft Server!</h2><hr></hr>
                             <br></br>
                             <div style={{ display: 'flex', justifyContent: 'center', textalign: 'center', }}>
                                 <Button variant="contained" color="primary" onClick={() => {

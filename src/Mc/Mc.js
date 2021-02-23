@@ -8,7 +8,7 @@ class Mc extends Component {
             <>
                     <div style={{ display: 'flex', justifyContent: 'center', padding: 30, textalign: 'center' }}>
                         <div ><h2 style={{ display: 'flex', justifyContent: 'center', padding: 5, textalign: 'center', }}>My Minecraft Server!</h2><hr></hr>
-                            <Serverstatus/>
+                            <Serverstatus url="2b2t.org"/>
                         </div>
                     </div >
             </>

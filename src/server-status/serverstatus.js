@@ -13,7 +13,7 @@ var pic = 'iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAA
 
 export class Serverstatus extends Component {
     render() {
-        const {url} = this.props
+        var {url} = this.props
         return (
             <>
                 <BrowserView>

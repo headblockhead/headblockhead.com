@@ -66,6 +66,9 @@ class Games extends Component {
                             <br></br><br></br>
                             <a> SB3 file: </a><a href="files/scratch" download="iphone3.sb3">iphone3.sb3</a>
                             <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                            {/* <h2>3D Lazer Tag</h2>
+                            <p>This was my first unity game. Designed for mobile, this project was going to be a lazer tag simulation game. Shoot the purple capsule to win.</p>
+                            <a> HTML 5 Build: </a><a href="./UnityHTML5/3DLAZERTAG">Here</a> */}
                         </div>
                         <div>
                             <br></br>
@@ -90,16 +93,16 @@ class Games extends Component {
                             <iframe title="questioncat" src="https://scratch.mit.edu/projects/137951368/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowFullScreen></iframe>
                             <br></br>
                             <br></br>
-                            <iframe title="bubblepop" src="https://scratch.mit.edu/projects/129351718/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                            <iframe title="bubblepop" src="https://scratch.mit.edu/projects/129351718/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowFullScreen></iframe>
                             <br></br>
                             <br></br>
-                            <iframe title="iphone1" src="https://scratch.mit.edu/projects/129299025/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                            <iframe title="iphone1" src="https://scratch.mit.edu/projects/129299025/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowFullScreen></iframe>
                             <br></br>
                             <br></br>
-                            <iframe title="iphone2" src="https://scratch.mit.edu/projects/253165316/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                            <iframe title="iphone2" src="https://scratch.mit.edu/projects/253165316/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowFullScreen></iframe>
                             <br></br>
                             <br></br>
-                            <iframe title="iphone3" src="https://scratch.mit.edu/projects/269089599/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                            <iframe title="iphone3" src="https://scratch.mit.edu/projects/269089599/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowFullScreen></iframe>
                             <br></br>
                             <br></br>
                         </div>

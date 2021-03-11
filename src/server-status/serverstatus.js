@@ -57,7 +57,7 @@ export class Serverstatus extends Component {
                         <div id="c3">
                             <hr></hr>
                             <div id="c5">
-                                <p>{url}</p>
+                                <p>The Barkup</p>
 
                             </div>
                             <div id="c4">
@@ -112,7 +112,7 @@ export class Serverstatus extends Component {
                         <div id="c3mobile">
                             <hr></hr>
                             <div id="c5mobile">
-                                <p>{url}</p>
+                                <p>The Barkup</p>
                             </div>
                             <Button size='small' variant="outlined" color="secondary" onClick={() => { window.open("https://github.com/headblockhead/react-minecraft-server-display") }}>Like this?</Button>
                         </div>
